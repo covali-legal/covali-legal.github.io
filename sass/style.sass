@@ -1,0 +1,179 @@
+
+html, body, div, span, object, iframe,h1, h2, h3,
+h4, h5, h6, p, blockquote, pre,abbr, address, cite,
+code,del, dfn, em, img, ins, kbd, q, samp,small, strong,
+sub, sup, var,b, i,dl, dt, dd, ol, ul, li,fieldset, form,
+label, legend,table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,footer, header,
+hgroup, menu, nav, section, summary,time, mark, audio, video
+	margin: 0
+	padding: 0
+	border: 0
+	outline: 0
+	font-size: 100%
+	vertical-align: baseline
+	background: transparent
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+/*__________________________________________________________________________ Colors ______________________*/
+
+$black: #39363A
+$white: #ffffff
+
+$grey: #999999
+$grey_light: #f5f5f5
+$grey_dark: #666666
+
+/*__________________________________________________________________________ Mixins ______________________*/
+
+=transition($transition, $sec , $ease)
+	transition:         $transition $sec $ease
+	-o-transition:      $transition $sec $ease
+	-ms-transition:     $transition $sec $ease
+	-moz-transition:    $transition $sec $ease
+	-webkit-transition: $transition $sec $ease
+
+=border_radius($radius)
+	border-radius:         $radius
+	-o-border-radius:      $radius
+	-ms-border-radius:     $radius
+	-moz-border-radius:    $radius
+	-webkit-border-radius: $radius
+
+=border_radius_custom($radius_1, $radius_2, $radius_3, $radius_4)
+	border-radius:         $radius_1 $radius_2 $radius_3 $radius_4
+	-o-border-radius:      $radius_1 $radius_2 $radius_3 $radius_4
+	-ms-border-radius:     $radius_1 $radius_2 $radius_3 $radius_4
+	-moz-border-radius:    $radius_1 $radius_2 $radius_3 $radius_4
+	-webkit-border-radius: $radius_1 $radius_2 $radius_3 $radius_4
+
+=shadow($h_length, $v_length, $blur, $radius, $color)
+	box-shadow:         $h_length $v_length $blur $radius $color
+	-o-box-shadow:      $h_length $v_length $blur $radius $color
+	-ms-box-shadow:     $h_length $v_length $blur $radius $color
+	-moz-box-shadow:    $h_length $v_length $blur $radius $color
+	-webkit-box-shadow: $h_length $v_length $blur $radius $color
+
+
+/*__________________________________________________________________________ Basic ______________________*/
+
+body
+	position: relative
+	color: $grey_dark
+	font-family: 'Roboto', sans-serif
+	font-weight: 300
+	font-size: 13px
+	line-height: 22px
+	padding-top: 150px
+	background-color: $grey_light
+
+a, input, button, textarea, select
+	&:focus, &:active
+		outline:  0
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6
+	color: $black
+	font-weight: 500
+	font-family: 'Roboto', sans-serif
+	// text-transform: uppercase
+	margin: 0 0 15px
+
+strong, b
+	font-family: 'Roboto', sans-serif
+
+i, em
+	font-style: italic
+
+a
+	color: $grey_dark
+	+transition ( color, 0.3s, ease )
+	&:hover
+		text-decoration: none
+
+.clearfix:before,
+.clearfix:after
+	content: " "
+	display: table
+
+.clearfix:after
+	clear: both
+
+*
+	-webkit-tap-highlight-color: rgba(0,0,0,0)
+	-webkit-tap-highlight-color: transparent
+
+
+/*__________________________________________________________________________ Header ______________________*/
+
+.index-page,
+.index-page body
+	padding: 0
+	height: 100%
+	min-height: 480px
+	background-color: #ffffff
+
+.left-wrapper, .right-wrapper
+	float: left
+	display: table
+	width: 50%
+	height: 100%
+	min-height: 100%
+	overflow: hidden
+	background-color: #fff
+.left-wrapper-inner
+	display: table-cell
+	vertical-align: middle
+
+	.cover-container
+		margin: 30px auto
+		width: 280px
+		height: 420px
+		text-align: center
+		font-size: 13px
+
+		.logo
+			display: block
+			margin: 0 auto 100px
+			img
+				display: block
+				margin: 0 auto
+
+		span
+			display: block
+			color: #5c5c5c
+			margin-top: 30px
+			padding-top: 30px
+			font-size: 14px
+			font-weight: 500
+			text-transform: uppercase
+			border-top: 2px solid #f2f2f2
+
+.right-wrapper
+	position: relative
+	iframe
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+
+
+@media screen and (max-width: 767px)
+
+	.index-page,
+	.index-page body
+		min-height: 390px
+
+	.left-wrapper, .right-wrapper
+		float: none
+		width: 100%
+
+	.left-wrapper-inner .cover-container
+		margin: 20px auto
+		height: auto
+		.logo
+			margin: 0 auto 30px
+			img
+				width: 200px

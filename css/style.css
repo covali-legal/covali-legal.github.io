@@ -1,0 +1,43 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+/*__________________________________________________________________________ Colors ______________________ */
+/*__________________________________________________________________________ Mixins ______________________ */
+/*__________________________________________________________________________ Basic ______________________ */
+body { position: relative; color: #666666; font-family: "Roboto", sans-serif; font-weight: 300; font-size: 13px; line-height: 22px; padding-top: 150px; background-color: whitesmoke; }
+
+a:focus, a:active, input:focus, input:active, button:focus, button:active, textarea:focus, textarea:active, select:focus, select:active { outline: 0; }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { color: #39363a; font-weight: 500; font-family: "Roboto", sans-serif; margin: 0 0 15px; }
+
+strong, b { font-family: "Roboto", sans-serif; }
+
+i, em { font-style: italic; }
+
+a { color: #666666; transition: color 0s ease; -o-transition: color 0s ease; -ms-transition: color 0s ease; -moz-transition: color 0s ease; -webkit-transition: color 0s ease; }
+a:hover { text-decoration: none; }
+
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+
+.clearfix:after { clear: both; }
+
+* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-tap-highlight-color: transparent; }
+
+/*__________________________________________________________________________ Header ______________________ */
+.index-page, .index-page body { padding: 0; height: 100%; min-height: 480px; background-color: white; }
+
+.left-wrapper, .right-wrapper { float: left; display: table; width: 50%; height: 100%; min-height: 100%; overflow: hidden; background-color: white; }
+
+.left-wrapper-inner { display: table-cell; vertical-align: middle; }
+.left-wrapper-inner .cover-container { margin: 30px auto; width: 280px; height: 420px; text-align: center; font-size: 13px; }
+.left-wrapper-inner .cover-container .logo { display: block; margin: 0 auto 100px; }
+.left-wrapper-inner .cover-container .logo img { display: block; margin: 0 auto; }
+.left-wrapper-inner .cover-container span { display: block; color: #5c5c5c; margin-top: 30px; padding-top: 30px; font-size: 14px; font-weight: 500; text-transform: uppercase; border-top: 2px solid #f2f2f2; }
+
+.right-wrapper { position: relative; }
+.right-wrapper iframe { position: absolute; top: 0; right: 0; left: 0; bottom: 0; }
+
+@media screen and (max-width: 767px) { .index-page, .index-page body { min-height: 390px; }
+  .left-wrapper, .right-wrapper { float: none; width: 100%; }
+  .left-wrapper-inner .cover-container { margin: 20px auto; height: auto; }
+  .left-wrapper-inner .cover-container .logo { margin: 0 auto 30px; }
+  .left-wrapper-inner .cover-container .logo img { width: 200px; } }
